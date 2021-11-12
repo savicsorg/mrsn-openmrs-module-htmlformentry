@@ -303,6 +303,9 @@ public class OrderSubmissionElement implements HtmlGeneratorElement, FormSubmiss
 	}
 	
 	public void addError(List<FormSubmissionError> ret, String field, String messageCode) {
+		log.info("------------>>");
+		log.info(messageCode);
+		log.info(HtmlFormEntryUtil.translate(messageCode));
 		ret.add(new FormSubmissionError(field, HtmlFormEntryUtil.translate(messageCode)));
 	}
 	
